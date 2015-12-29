@@ -3,6 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script type="text/javascript">
+    eventModule.factory("InitialLoadService", function () {
+        return {
+            talks: @Html.Raw(Model)
+            };
+    });
+</script>
+
 <div class="container">
     <h2>Talk Details</h2>
     <div class="row" ng-init="talks = @Model">
