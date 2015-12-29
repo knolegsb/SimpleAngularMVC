@@ -29,5 +29,17 @@ namespace SimpleAngularMVC.Controllers
             };
             return jsonResult;
         }
+
+        public ActionResult GetSpeakerDetails()
+        {
+            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
+            var jsonResult = new ContentResult
+            {
+                Content = JsonConvert.SerializeObject(talkRepo.GetSpeakers(), settings),
+                ContentType = "application/json"
+            };
+            return jsonResult;
+        }
     }
 }

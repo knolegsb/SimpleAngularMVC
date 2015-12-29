@@ -18,5 +18,16 @@ namespace SimpleAngularMVC.Models
             };
             return talks;
         }
+
+        public Speakers[] GetSpeakers()
+        {
+            var speakers = new[]
+            {
+                new Speakers { Id="S001", Name="Sean You", Expertise="Client Script, ASP.NET", TalkDelivered=28 },
+                new Speakers { Id="S002", Name="Hansome Boy", Expertise="Node.js, WCF", TalkDelivered=54 },
+                new Speakers { Id="S003", Name="Lonsome Girl", Expertise="Microsoft Azure", TalkDelivered=68 }
+            };
+            return speakers;
+        }
     }
 }
