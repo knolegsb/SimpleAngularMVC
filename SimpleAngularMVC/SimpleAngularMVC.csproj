@@ -234,6 +234,7 @@
     <Content Include="Scripts\Events\eventModule.js" />
     <Content Include="Scripts\Events\EventsService.js" />
     <Content Include="Scripts\Events\speakerController.js" />
+    <Content Include="Scripts\Events\talkController.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -988,6 +989,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Templates\AddTalk.html" />
     <Content Include="Templates\Speaker.html" />
     <Content Include="Templates\Talk.html" />
     <Content Include="Scripts\_references.js" />

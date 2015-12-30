@@ -7,15 +7,16 @@ namespace SimpleAngularMVC.Models
 {
     public class TalkRepository
     {
-        public Talks[] GetTalks()
-        {
-            var talks = new[]
+        static Talks[] talks = new[]
             {
                 new Talks { Id = 1001, Name = "Real Time Web Applications with SignalR", Speaker = "Sean You", Venue = "Hall 101", Duration = "45m" },
                 new Talks { Id = 1002, Name = "Power of Node.js", Speaker = "Earnest Hemington", Venue = "Hall 102", Duration = "45m" },
                 new Talks { Id = 1003, Name = "Getting started with AngularJS", Speaker = "Monte Vista", Venue = "Hall 103", Duration = "60m" },
                 new Talks { Id = 1004, Name = "Microsoft Azure - Your cloud destination", Speaker = "Gaurav mantri", Venue = "Hall 104", Duration = "45m" }
             };
+
+        public Talks[] GetTalks()
+        {            
             return talks;
         }
 
@@ -28,6 +29,11 @@ namespace SimpleAngularMVC.Models
                 new Speakers { Id="S003", Name="Lonsome Girl", Expertise="Microsoft Azure", TalkDelivered=68 }
             };
             return speakers;
+        }
+
+        public void AddTalk(Talks talk)
+        {
+            talks = talks.Concat(new[] { talk }).ToArray();
         }
     }
 }
